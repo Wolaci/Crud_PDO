@@ -41,9 +41,10 @@
 		</select>
 		E-mail: <input type="text" name="email">
 		Informações adicionais: <input type="text" name="informacao">
-		Tipo Cliente: <input type="radio" name="fisica"> <input type="radio" name="Juridica">
-		CPF / CNPJ<input type="text" name="cpf">
+Tipo cliente:
+<input type="radio" name="opcao" value="op1"> Física
+<input type="radio" name="opcao" value="op2"> Jurídica 
+ 
 	</form>
 </body>
-</html>)
-Tocantins (TO)
+</html>
