@@ -1,4 +1,5 @@
-
+// JavaScript Document
+//adiciona mascara de cnpj
 function MascaraCNPJ(cnpj){
         if(mascaraInteiro(cnpj)==false){
                 event.returnValue = false;
@@ -6,26 +7,33 @@ function MascaraCNPJ(cnpj){
         return formataCampo(cnpj, '00.000.000/0000-00', event);
 }
 
-
+//adiciona mascara ao telefone
 function MascaraTelefone(tel){  
         if(mascaraInteiro(tel)==false){
                 event.returnValue = false;
         }       
-        return formataCampo(tel, '(00)00000-0000', event);
+        return formataCampo(tel, '(00) 0000-0000', event);
 }
 
+//adiciona mascara ao CPF
 function MascaraCPF(cpf){
         if(mascaraInteiro(cpf)==false){
                 event.returnValue = false;
         }       
         return formataCampo(cpf, '000.000.000-00', event);
-}   
-
-function ValidaData(data){
-        exp = /\d{2}\/\d{2}\/\d{4}/
-        if(!exp.test(data.value))
-                alert('Data Invalida!');                        
 }
+
+//valida telefone
+function ValidaTelefone(tel){
+        exp = /\(\d{2}\)\ \d{4}\-\d{4}/
+        if(!exp.test(tel.value))
+                alert('Numero de Telefone Invalido!');
+}
+
+
+
+
+//valida numero inteiro com mascara
 function mascaraInteiro(){
         if (event.keyCode < 48 || event.keyCode > 57){
                 event.returnValue = false;
@@ -34,7 +42,6 @@ function mascaraInteiro(){
         return true;
 }
 
-//formata de forma generica os campos
 function formataCampo(campo, Mascara, evento) { 
         var boleanoMascara; 
 

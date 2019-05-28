@@ -5,9 +5,8 @@ use tecnologia;
 create table users (
     id          int primary key auto_increment,
     name        varchar(255),
-    telefone    varchar(50),
+    tel         varchar(50),
     cidade      varchar(50),
-    telefone    varchar(50),
     estado      varchar(50),
     email       varchar(100),
     info        varchar(50),
@@ -16,7 +15,3 @@ create table users (
     cnpj         varchar(100),
     is_admin    boolean
 );
-
-drop user if exists 'raj';
-create user if not exists "raj" identified with mysql_native_password by "raj";
-grant all privileges on tecnologia.* to "raj";

@@ -7,8 +7,9 @@
 	<script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script>
 </head>
 <body>	
-	<form action="" name="form1">
-		Nome: <input type="text" name="nome">
+</form>
+	<form action="add.php" method="POST" name="form1">
+		Nome: <input type="text" name="name">
 		<br><br>Telefone: 
 		<input type="text" name="tel" onKeyPress="MascaraTelefone(form1.tel);" 
 		maxlength="14"  onBlur="ValidaTelefone(form1.tel);">
@@ -54,7 +55,9 @@
 		<br><br>CNPJ:
 		<input type="text" name="cnpj" onKeyPress="MascaraCNPJ(form1.cnpj);" 
 		maxlength="18" onBlur="ValidarCNPJ(form1.cnpj);">
+		<input type="submit" value="Enviar">
 	</form>
+
 
 </body>
 </html>
