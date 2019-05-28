@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Cadastro</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script>
 </head>
 <body>	
 	<form action="" name="form1">
