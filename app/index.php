@@ -44,10 +44,10 @@
 			<option value="Tocantins">Tocantins (TO)</option>
 		</select>
 		<br><br>E-mail: <input type="text" name="email">
-		<br><br>Informações adicionais: <input type="text" name="informacao">
+		<br><br>Informações adicionais: <input type="text" name="info">
 		<br><br>Tipo cliente:
-		<input type="radio" name="opcao" value="op1"> Física
-        <input type="radio" name="opcao" value="op2"> Jurídica 
+		<input type="radio" name="tipo" value="op1"> Física
+        <input type="radio" name="tipo" value="op2"> Jurídica 
 		<br><br>CPF:
 		<input type="text" name="cpf" onBlur="ValidarCPF(form1.cpf);" 
 		onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
