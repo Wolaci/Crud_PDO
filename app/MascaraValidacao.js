@@ -1,5 +1,3 @@
-// JavaScript Document
-//adiciona mascara de cnpj
 function MascaraCNPJ(cnpj){
         if(mascaraInteiro(cnpj)==false){
                 event.returnValue = false;
