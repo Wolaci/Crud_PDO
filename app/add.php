@@ -9,9 +9,16 @@ $query->execute([$_POST['name'],$_POST['tel'],$_POST['cidade'],$_POST['estado'],
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
-	<p>Você cadastrou seus dados, clique no link abaixo para ver seus dados:</p>
-	<a href="dados.php">ver dados</a>
+	<div class="container">
+		<div class="card mt-5">
+			<div class="card-body">
+			<p>Você cadastrou seus dados, clique no link abaixo para ver seus dados:</p>
+			<a class="btn btn-outline-primary" role="button" href="dados.php">Ver dados</a>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

@@ -6,15 +6,24 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script>
 	<script language="JavaScript" type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style>
+		body{
+			background-color: grey; 
+		}
+	</style>
 </head>
 <body>	
-	<form action="add.php" method="POST" name="form1">
-		Nome: <input type="text" name="name">
+<div class="container">
+	<form action="add.php" method="POST" name="form1" class="form-group row">
+		<div class="col mr-3">
+			
+		Nome: <input class="form-control " type="text" name="name">
 		<br><br>Telefone: 
-		<input type="text" name="tel" onKeyPress="MascaraTelefone(form1.tel);" 
+		<input class="form-control " type="text" name="tel" onKeyPress="MascaraTelefone(form1.tel);" 
 		maxlength="15"  onBlur="ValidaTelefone(form1.tel);">
-		<br><br>Cidade: <input type="text" name="cidade">
-		<br><br>Estado: <select name="estado">
+		<br><br>Cidade: <input class="form-control " type="text" name="cidade">
+		<br><br>Estado: <select class="form-control " name="estado">
 			<option value="">Selecione eu Etado</option>
 			<option value="Acre">Acre (AC)</option>
 			<option value="Alagoas">Alagoas (AL)</option>
@@ -44,19 +53,32 @@
 			<option value="Sergipe">Sergipe (SE)</option>
 			<option value="Tocantins">Tocantins (TO)</option>
 		</select>
-		<br><br>E-mail: <input type="text" name="email">
-		<br><br>Informações adicionais: <input type="text" name="info">
-		<br><br>Tipo cliente:
-		<input type="radio" name="tipo" value="op1"> Física
-        <input type="radio" name="tipo" value="op2"> Jurídica 
+		<br><br>E-mail: <input class="form-control " type="text" name="email">
+		</div>
+		<div class="col justify-content-between">
+			
+		Informações adicionais: <input class="form-control " type="text" name="info">
+		<div class="row">
+		<div class="col-3"><label class="" for="">Tipo cliente:</label></div>
+		</div>
+		<div class="row">
+			<label class="col-2" for="">Física </label>
+		<input class="form-control col-2 mt-1" type="radio" name="tipo" value="op1">
+		</div>
+		<div class="row">
+        	<label class="col-2" for="">Jurídica </label>
+        <input class="form-control col-2 mt-1	" type="radio" name="tipo" value="op2">
+		</div>
 		<br><br>CPF:
-		<input type="text" id="op1" name="cpf" onBlur="ValidarCPF(form1.cpf);" 
+		<input class="form-control " type="text" id="op1" name="cpf" onBlur="ValidarCPF(form1.cpf);" 
 		onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
 		<br><br>CNPJ:
-		<input type="text" id="op2" name="cnpj" onKeyPress="MascaraCNPJ(form1.cnpj);" 
+		<input class="form-control " type="text" id="op2" name="cnpj" onKeyPress="MascaraCNPJ(form1.cnpj);" 
 		maxlength="18" onBlur="ValidarCNPJ(form1.cnpj);">
-		<input type="submit" value="Enviar">
+		<input class="form-control " type="submit" value="Enviar">
+		</div>
 	</form>
+	</div>
 	<script type="text/javascript">
 		$('input[type=radio]').on('click', function(event) {
 /* Act on the event */

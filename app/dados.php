@@ -8,9 +8,11 @@
 <html>
 <head>
 	<title></title>
+		<link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
-	<table>
+	<div class="container">
+	<table class="table">
 		<tr>
 			<th>Código</th>
 			<th>Nome</th>
@@ -41,8 +43,16 @@
 		</tr>
 			<?php  endforeach; ?>
 	</table>
-	<h1>Parabéns, você cadastrou seus dados</h1>
-	<p>Volte para a tela inicial</p>
-	<a href="index.php">clique aqui</a>
+	</div>
+	<div class="container">
+		<div class="card mt-5">
+			<div class="card-body">
+			<p>Parabéns, você cadastrou seus dados! Volte para a tela inicial caso tenha terminado.</p>
+			<a class="btn btn-outline-primary" role="button" href="index.php">Clique aqui</a>
+			</div>
+		</div>
+	</div>
+	
+	
 </body>
 </html>
