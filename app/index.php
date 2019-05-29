@@ -18,12 +18,12 @@
 	<form action="add.php" method="POST" name="form1" class="form-group row">
 		<div class="col mr-3">
 			
-		Nome: <input class="form-control " type="text" name="name">
+		Nome: <input class="form-control " type="text" name="name" required >
 		<br><br>Telefone: 
 		<input class="form-control " type="text" name="tel" onKeyPress="MascaraTelefone(form1.tel);" 
-		maxlength="15"  onBlur="ValidaTelefone(form1.tel);">
-		<br><br>Cidade: <input class="form-control " type="text" name="cidade">
-		<br><br>Estado: <select class="form-control " name="estado">
+		maxlength="15"  onBlur="ValidaTelefone(form1.tel);" required >
+		<br><br>Cidade: <input class="form-control " type="text" name="cidade" required >
+		<br><br>Estado: <select class="form-control " name="estado" required >
 			<option value="">Selecione eu Etado</option>
 			<option value="Acre">Acre (AC)</option>
 			<option value="Alagoas">Alagoas (AL)</option>
@@ -53,25 +53,25 @@
 			<option value="Sergipe">Sergipe (SE)</option>
 			<option value="Tocantins">Tocantins (TO)</option>
 		</select>
-		<br><br>E-mail: <input class="form-control " type="text" name="email">
+		<br><br>E-mail: <input class="form-control " type="text" name="email" required >
 		</div>
 		<div class="col justify-content-between">
 			
-		Informações adicionais: <input class="form-control " type="text" name="info">
+		Informações adicionais: <input class="form-control " type="text" name="info" required >
 		<div class="row">
 		<div class="col-3"><label class="" for="">Tipo cliente:</label></div>
 		</div>
 		<div class="row">
 			<label class="col-2" for="">Física </label>
-		<input class="form-control col-2 mt-1" type="radio" name="tipo" value="op1">
+		<input class="form-control col-2 mt-1" type="radio" name="tipo" value="op1" required >
 		</div>
 		<div class="row">
         	<label class="col-2" for="">Jurídica </label>
-        <input class="form-control col-2 mt-1	" type="radio" name="tipo" value="op2">
+        <input class="form-control col-2 mt-1	" type="radio" name="tipo" value="op2" required >
 		</div>
 		<br><br>CPF:
 		<input class="form-control " type="text" id="op1" name="cpf" onBlur="ValidarCPF(form1.cpf);" 
-		onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
+		onKeyPress="MascaraCPF(form1.cpf);" maxlength="14" >
 		<br><br>CNPJ:
 		<input class="form-control " type="text" id="op2" name="cnpj" onKeyPress="MascaraCNPJ(form1.cnpj);" 
 		maxlength="18" onBlur="ValidarCNPJ(form1.cnpj);">
@@ -79,7 +79,7 @@
 		</div>
 	</form>
 	</div>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		$('input[type=radio]').on('click', function(event) {
 /* Act on the event */
 		if ($(this).val()=='op1') {
@@ -90,6 +90,6 @@
 		$('#op2').removeAttr('disabled');
 }
 });
-	</script>
+	</script> -->
 </body>
 </html>
