@@ -5,6 +5,7 @@
 	<title>Cadastro</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script>
+	<script language="JavaScript" type="text/javascript" src="jquery-3.4.1.min.js"></script>
 </head>
 <body>	
 </form>
@@ -12,7 +13,7 @@
 		Nome: <input type="text" name="name">
 		<br><br>Telefone: 
 		<input type="text" name="tel" onKeyPress="MascaraTelefone(form1.tel);" 
-		maxlength="14"  onBlur="ValidaTelefone(form1.tel);">
+		maxlength="15"  onBlur="ValidaTelefone(form1.tel);">
 		<br><br>Cidade: <input type="text" name="cidade">
 		<br><br>Estado: <select name="estado">
 			<option value="">Selecione eu Etado</option>
@@ -50,13 +51,14 @@
 		<input type="radio" name="tipo" value="op1"> Física
         <input type="radio" name="tipo" value="op2"> Jurídica 
 		<br><br>CPF:
-		<input type="text" name="cpf" onBlur="ValidarCPF(form1.cpf);" 
+		<input type="text" id="op1" name="cpf" onBlur="ValidarCPF(form1.cpf);" 
 		onKeyPress="MascaraCPF(form1.cpf);" maxlength="14">
 		<br><br>CNPJ:
-		<input type="text" name="cnpj" onKeyPress="MascaraCNPJ(form1.cnpj);" 
+		<input type="text" id="op2" name="cnpj" onKeyPress="MascaraCNPJ(form1.cnpj);" 
 		maxlength="18" onBlur="ValidarCNPJ(form1.cnpj);">
 		<input type="submit" value="Enviar">
 	</form>
+	
 
 
 </body>
