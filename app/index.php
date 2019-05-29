@@ -8,7 +8,6 @@
 	<script language="JavaScript" type="text/javascript" src="jquery-3.4.1.min.js"></script>
 </head>
 <body>	
-</form>
 	<form action="add.php" method="POST" name="form1">
 		Nome: <input type="text" name="name">
 		<br><br>Telefone: 
@@ -58,8 +57,17 @@
 		maxlength="18" onBlur="ValidarCNPJ(form1.cnpj);">
 		<input type="submit" value="Enviar">
 	</form>
-	
-
-
+	<script type="text/javascript">
+		$('input[type=radio]').on('click', function(event) {
+/* Act on the event */
+		if ($(this).val()=='op1') {
+		$('#op2').attr('disabled', 'true');
+		$('#op1').removeAttr('disabled');
+}		else{
+		$('#op1').attr('disabled', 'true');
+		$('#op2').removeAttr('disabled');
+}
+});
+	</script>
 </body>
 </html>
